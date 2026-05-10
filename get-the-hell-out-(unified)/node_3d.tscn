@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dhndj646cb2ct"]
+
+[node name="Node3D" type="Node3D" unique_id=432634779]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1254541350]
+
+[node name="Player" type="Node" parent="." unique_id=37922175]
+
+[node name="char1" type="Node" parent="Player" unique_id=91967163]
+
+[node name="Node2D" type="Node2D" parent="Player/char1" unique_id=2006064620]
