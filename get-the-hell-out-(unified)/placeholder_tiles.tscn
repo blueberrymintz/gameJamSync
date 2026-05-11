@@ -2,9 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cpxowk6yhjjh4" path="res://assets_3d/placeholders_3d/placeholder_tiles.glb" id="1_ktd2s"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktd2s"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_ktd2s"]
 
 [node name="placeholder_tiles" unique_id=1467689365 instance=ExtResource("1_ktd2s")]
 
-[node name="corner_tile_right_clean" parent="." index="5" unique_id=397224297]
-surface_material_override/0 = SubResource("StandardMaterial3D_ktd2s")
+[node name="navMesh" type="MeshInstance3D" parent="base_ground_tile_1" parent_id_path=PackedInt32Array(890228807) index="0" unique_id=1304095237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("PlaneMesh_ktd2s")
