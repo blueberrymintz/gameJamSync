@@ -177,19 +177,7 @@ data = {
 image = SubResource("Image_mt52v")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax2nw"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_40osv"]
-_surfaces = [{
-"aabb": AABB(-1, -0.15058815, -1, 2, 0.5135293, 2),
-"format": 34896613377,
-"index_count": 18,
-"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAwAEAAEAAgAEAAUAAwAGAAQA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 7,
-"vertex_data": PackedByteArray("//8AAAAAAAD///////8AAP////8AAAAA//8AAP//AAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
-}]
-blend_shape_mode = 0
+rim_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o7rl0"]
 resource_name = "placeholder_tiles_Cube_024"
@@ -206,7 +194,6 @@ _surfaces = [{
 "vertex_data": PackedByteArray("//8AAAAAVNX///////9U1f////8AAFTV//8AAP//VNX//wAA//8AgAAA/////wCA////////AIAAAAAA//8AgP////8AAP+/AAD//////78AAP//AAD/v/////////+/qqpUVaqqVFWqqlRVqqpUVf9/////f////3////9///////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_40osv")
 
 [sub_resource type="Image" id="Image_xju1a"]
 data = {

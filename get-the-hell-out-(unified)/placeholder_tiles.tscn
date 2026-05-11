@@ -2,4 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cpxowk6yhjjh4" path="res://assets_3d/placeholders_3d/placeholder_tiles.glb" id="1_ktd2s"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktd2s"]
+
 [node name="placeholder_tiles" unique_id=1467689365 instance=ExtResource("1_ktd2s")]
+
+[node name="corner_tile_right_clean" parent="." index="5" unique_id=397224297]
+surface_material_override/0 = SubResource("StandardMaterial3D_ktd2s")
