@@ -31,7 +31,7 @@ func set_movement_target(target_position: Vector3):
 	current_path = NavigationServer3D.map_get_path(
 		agent.get_navigation_map(),
 		start_position,
-		target,
+		target_position,
 		false
 	)
 
@@ -95,3 +95,30 @@ func snapToGrid(vector):
 func updateTargetLoc(target):
 	agent.set_target_position(target)
 	set_movement_target(target)
+
+const RAY_LENGTH = 1000.0
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
+		var camera3d = get_viewport().get_camera_3d()
+		var from = camera3d.project_ray_origin(event.position)
+		var to = from + camera3d.project_ray_normal(event.position) * RAY_LENGTH
+		var space_state = get_world_3d().direct_space_state
+		var params = PhysicsRayQueryParameters3D.new()
+		
+		params.from = from
+		params.to = to
+		params.collide_with_areas = true  # Set to true to include Area nodes
+		params.collide_with_bodies = true  # Set to true to include PhysicsBody nodes (don't know if necessary
+		
+		var result = space_state.intersect_ray(params)
+		print("test")
+		if result.is_empty():
+			print("empty result")
+		elif result and result.collider and result.collider.is_class("Area3D"):
+			result.collider.on_ray_hit()
+		else: 
+			print("Raycast hit:", result.collider.name)
+			if result.collider.name == "Floor":
+				print(result.position)
+				updateTargetLoc(Vector3(result.position.x, 2.5, result.position.z))
