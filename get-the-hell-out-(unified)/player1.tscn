@@ -1,7 +1,6 @@
-[gd_scene format=3 uid="uid://bfk1cft047u2q"]
+[gd_scene format=3 uid="uid://cqtfbt53iwk5n"]
 
-[ext_resource type="Script" uid="uid://blhbgl7itxkyf" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bt1ft44m0y2k4" path="res://navigation_agent_3d.gd" id="2_onrkg"]
+[ext_resource type="Script" path="res://player.gd" id="1_ng0wg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
@@ -10,7 +9,7 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 
 [node name="Player" type="RigidBody3D" unique_id=2104741943]
 lock_rotation = true
-script = ExtResource("1_4flbx")
+script = ExtResource("1_ng0wg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1586665219]
 mesh = SubResource("CapsuleMesh_onrkg")
@@ -25,6 +24,3 @@ transform = Transform3D(1, 0, 0, 0, 0.94551855, 0.32556814, 0, -0.32556814, 0.94
 
 [node name="Camera3D" type="Camera3D" parent="twistPivot/pitchPivot" unique_id=443791308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1047498546]
-script = ExtResource("2_onrkg")

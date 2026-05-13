@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Get_The_Hell_Out_(Unified)"
-run/main_scene="uid://bnau8wlb4t12s"
+run/main_scene="uid://ci10p8qbhhwll"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
