@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cfe1y6l8kkxx4" path="res://in_level_ui.gd" id="1_vjinv"]
 [ext_resource type="Texture2D" uid="uid://dywj208j2ohev" path="res://assets_2d/moveIcon.png" id="2_pwoxl"]
 [ext_resource type="Texture2D" uid="uid://dv8imsrg84i6g" path="res://assets_2d/nextIcon.png" id="3_vjinv"]
+[ext_resource type="Script" uid="uid://ccy20oc0vbn78" path="res://action_manager.gd" id="5_4fm4d"]
 
 [node name="in_level_UI" type="Control" unique_id=633890461]
 layout_mode = 3
@@ -46,6 +47,9 @@ layout_mode = 2
 [node name="next_button" type="TextureButton" parent="VBoxContainer" unique_id=182320638]
 layout_mode = 2
 texture_normal = ExtResource("3_vjinv")
+
+[node name="action_manager" type="Node" parent="." unique_id=1606388210]
+script = ExtResource("5_4fm4d")
 
 [connection signal="button_up" from="VBoxContainer/attack_button" to="." method="_attack_pressed"]
 [connection signal="button_up" from="VBoxContainer/move_button" to="." method="_move_pressed"]
