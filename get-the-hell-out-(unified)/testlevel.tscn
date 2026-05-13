@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://w4wovwp5cabx"]
+[gd_scene format=3 uid="uid://cvqjyesiweoit"]
 
 [ext_resource type="MeshLibrary" uid="uid://tw53s70g4pfm" path="res://assets_3d/placeholders_3d/placeholder_3d.tres" id="1_w3snd"]
-[ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="2_pi5jr"]
+[ext_resource type="Script" path="res://camera_position.gd" id="2_pi5jr"]
 [ext_resource type="PackedScene" uid="uid://cpxowk6yhjjh4" path="res://assets_3d/placeholders_3d/placeholder_tiles.glb" id="3_74kyy"]
 
 [sub_resource type="Environment" id="Environment_pi5jr"]

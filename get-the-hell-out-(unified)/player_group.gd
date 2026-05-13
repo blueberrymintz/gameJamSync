@@ -1,20 +1,15 @@
 extends Node
 
-@onready var isMyTurn = 0;
-@onready var attackSelect = 0;
-@onready var moveSelect = 0;
-@onready var nextSelect = 0;
+
+
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	isMyTurn = 0;
-	attackSelect = 0;
-	moveSelect = 0;
-	nextSelect = 0;
-	
-	
-	
+	pass # Replace with function body.
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

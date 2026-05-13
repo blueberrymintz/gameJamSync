@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bm72qvlcf71sx"]
+[gd_scene format=3 uid="uid://gk2pkg76dnfs"]
 
 [ext_resource type="PackedScene" uid="uid://cpxowk6yhjjh4" path="res://assets_3d/placeholders_3d/placeholder_tiles.glb" id="1_ktd2s"]
 
@@ -6,6 +6,6 @@
 
 [node name="placeholder_tiles" unique_id=1467689365 instance=ExtResource("1_ktd2s")]
 
-[node name="navMesh" type="MeshInstance3D" parent="base_ground_tile_1" parent_id_path=PackedInt32Array(890228807) index="0" unique_id=1304095237]
+[node name="navMesh" type="MeshInstance3D" parent="base_ground_tile_1" parent_id_path=PackedInt32Array(1407721239) index="0" unique_id=1304095237]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("PlaneMesh_ktd2s")
