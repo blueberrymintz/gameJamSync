@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 #use updateTargetLoc to set target location
 
+@export var overlayScene: PackedScene
 @onready var agent = $NavigationAgent3D
 var speed = 1
 var target: Vector3
@@ -105,11 +106,12 @@ func _input(event):
 		var to = from + camera3d.project_ray_normal(event.position) * RAY_LENGTH
 		var space_state = get_world_3d().direct_space_state
 		var params = PhysicsRayQueryParameters3D.new()
+		var instance
 		
 		params.from = from
 		params.to = to
 		params.collide_with_areas = true  # Set to true to include Area nodes
-		params.collide_with_bodies = true  # Set to true to include PhysicsBody nodes (don't know if necessary
+		params.collide_with_bodies = true
 		
 		var result = space_state.intersect_ray(params)
 		print("test")
@@ -122,3 +124,6 @@ func _input(event):
 			if result.collider.name == "Floor":
 				print(result.position)
 				updateTargetLoc(Vector3(result.position.x, 2.5, result.position.z))
+				instance = overlayScene.instantiate()
+				instance.transform.origin = Vector3(result.position.x, 4.5, result.position.z)
+				

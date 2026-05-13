@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ci10p8qbhhwll"]
 
+[ext_resource type="Script" uid="uid://ciwvf3kv15lfo" path="res://navtest.gd" id="1_2qy7u"]
 [ext_resource type="MeshLibrary" uid="uid://bri27cc0om55i" path="res://assets_3d/placeholders_3d/placeholder_3d_baked.tres" id="1_nlfv2"]
 [ext_resource type="Script" uid="uid://dyxx68pbfqst1" path="res://temp_player.gd" id="2_4h6bl"]
 [ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="3_nlfv2"]
+[ext_resource type="PackedScene" uid="uid://ctxhj7yfccw2t" path="res://assets_3d/overlay_tile.tscn" id="4_0gads"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_nlfv2"]
 sample_partition_type = 2
@@ -13,7 +15,12 @@ agent_radius = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gads"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_nlfv2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2qy7u"]
+
 [node name="Node3D" type="Node3D" unique_id=105528715]
+script = ExtResource("1_2qy7u")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=142049342]
 navigation_mesh = SubResource("NavigationMesh_nlfv2")
@@ -28,6 +35,7 @@ data = {
 [node name="TempPlayer" type="CharacterBody3D" parent="." unique_id=1796064656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -2)
 script = ExtResource("2_4h6bl")
+overlayScene = ExtResource("4_0gads")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TempPlayer" unique_id=950814257]
@@ -51,3 +59,13 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=252203002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60, 0)
+
+[node name="TempEnemy" type="CharacterBody3D" parent="." unique_id=1559393191]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TempEnemy" unique_id=684434213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -4)
+mesh = SubResource("SphereMesh_nlfv2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempEnemy" unique_id=832116288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -4)
+shape = SubResource("SphereShape3D_2qy7u")
