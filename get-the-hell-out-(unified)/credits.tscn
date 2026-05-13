@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bm7gg22f24652" path="res://assets_2d/creditsBackground.png" id="1_c1t8d"]
 [ext_resource type="Script" uid="uid://bqju834peojb2" path="res://credits_menu.gd" id="1_g4wvt"]
 [ext_resource type="Texture2D" uid="uid://bu478abu8whx" path="res://assets_2d/menuButton.png" id="2_g4wvt"]
+[ext_resource type="PackedScene" uid="uid://doiua45dgikih" path="res://audio_stream_player.tscn" id="4_pjc1l"]
 
 [node name="credits_menu" type="Control" unique_id=788634310]
 layout_mode = 3
@@ -35,4 +36,7 @@ offset_bottom = 855.0
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("2_g4wvt")
 
+[node name="audio_manager" parent="." unique_id=103913394 instance=ExtResource("4_pjc1l")]
+
+[connection signal="ready" from="." to="audio_manager" method="credits_audio"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_button_credits_pressed"]

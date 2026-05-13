@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wu2uluvceh7b" path="res://assets_2d/menuBackground.png" id="1_vpdu5"]
 [ext_resource type="Texture2D" uid="uid://t5fudsuiivfx" path="res://assets_2d/startButton.png" id="2_v2mkm"]
 [ext_resource type="Texture2D" uid="uid://5jrqxetx8dym" path="res://assets_2d/creditsButton.png" id="3_ctwoq"]
+[ext_resource type="PackedScene" uid="uid://doiua45dgikih" path="res://audio_stream_player.tscn" id="5_ctwoq"]
 
 [node name="Start_Menu" type="Control" unique_id=1794789802]
 layout_mode = 3
@@ -45,5 +46,8 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("3_ctwoq")
 
+[node name="audio_manager" parent="." unique_id=103913394 instance=ExtResource("5_ctwoq")]
+
+[connection signal="ready" from="." to="audio_manager" method="menu_audio"]
 [connection signal="pressed" from="VBoxContainer/Start_Button" to="." method="_on_button_play_pressed"]
 [connection signal="button_up" from="VBoxContainer/Credits_Button" to="." method="_on_button_credits_pressed"]

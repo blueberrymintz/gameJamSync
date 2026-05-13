@@ -1,5 +1,8 @@
 extends Control
 
+@onready var audio = $audio_manager
+
+
 const MainMenu = preload("res://start_menu.tscn")
 const Level1 = preload("res://navtest.tscn")
 const LevelCredits = preload("res://credits.tscn")

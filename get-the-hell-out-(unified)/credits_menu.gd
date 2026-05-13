@@ -1,5 +1,8 @@
 extends Control
 
+
+@onready var audio = $audio_manager
+
 const mainMenu = preload("res://start_menu.tscn")
 
 #names
