@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://m5gy0ey0exau"]
+
+[ext_resource type="Script" uid="uid://ba7lec1y1m107" path="res://navtest_2.gd" id="1_3doal"]
+[ext_resource type="MeshLibrary" uid="uid://bri27cc0om55i" path="res://assets_3d/placeholders_3d/placeholder_3d_baked.tres" id="1_tdt65"]
+[ext_resource type="PackedScene" uid="uid://r30bv5igdukn" path="res://temp_player.tscn" id="2_3doal"]
+[ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="3_38k8w"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_nlfv2"]
+vertices = PackedVector3Array(8, 1.8494, -4, 6, 1.8494, -4, 6, 1.8494, -2, 8, 1.8494, -2, 10, 1.8494, -2, 10, 1.8494, -4, 12, 1.8494, -6, 8, 1.8494, -6, 20, 1.8494, 8, 20, 1.8494, 10, 24, 1.8494, 10, 24, 1.8494, 8, 16, 1.8494, 8, 20, 1.8494, 6, 16, 1.8494, 6, 24, 1.8494, 6, 24, 1.8494, 4, 20, 1.8494, 4, 14, 1.8494, 12, 16, 1.8494, -4, 16, 1.8494, -10, 12, 1.8494, -10, 14, 1.8494, -4, -4, 1.8494, -8, -12, 1.8494, -8, -10, 1.8494, -6, -6, 1.8494, -6, 34, 1.8494, -6, 34, 1.8494, 4, 36, 1.8494, 6, 36, 1.8494, -8, -4, 1.8494, -2, -6, 1.8494, 4, -4, 1.8494, 0, 30, 1.8494, 8, 30, 1.8494, 6, 26, 1.8494, 4, 26, 1.8494, 6, -10, 1.8494, 4, -12, 1.8494, 6, 30, 1.8494, -4, 32, 1.8494, -2, 32, 1.8494, -6, 30, 1.8494, -8, -4, 1.8494, 6, 8, 1.8494, 0, 16, 1.8494, -2, 16, 1.8494, 14, 0, 1.8494, 12, 0, 1.8494, 14)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(0, 7, 6), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 13, 8), PackedInt32Array(13, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(12, 18, 14), PackedInt32Array(22, 6, 19), PackedInt32Array(19, 6, 21), PackedInt32Array(19, 21, 20), PackedInt32Array(8, 13, 15), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(27, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(26, 23, 31), PackedInt32Array(33, 32, 31), PackedInt32Array(31, 32, 26), PackedInt32Array(35, 34, 11), PackedInt32Array(6, 5, 0), PackedInt32Array(0, 5, 2), PackedInt32Array(37, 36, 35), PackedInt32Array(35, 36, 28), PackedInt32Array(8, 37, 11), PackedInt32Array(11, 37, 35), PackedInt32Array(38, 39, 25), PackedInt32Array(25, 39, 24), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(32, 44, 38), PackedInt32Array(38, 44, 39), PackedInt32Array(8, 15, 37), PackedInt32Array(33, 44, 32), PackedInt32Array(27, 42, 30), PackedInt32Array(30, 42, 43), PackedInt32Array(31, 2, 33), PackedInt32Array(33, 2, 45), PackedInt32Array(19, 40, 46), PackedInt32Array(46, 40, 41), PackedInt32Array(3, 45, 2), PackedInt32Array(5, 3, 2), PackedInt32Array(28, 29, 35), PackedInt32Array(22, 5, 6), PackedInt32Array(12, 47, 18), PackedInt32Array(22, 19, 46), PackedInt32Array(46, 14, 22), PackedInt32Array(22, 14, 18), PackedInt32Array(48, 18, 49), PackedInt32Array(49, 18, 47)]
+sample_partition_type = 2
+geometry_parsed_geometry_type = 1
+agent_radius = 0.0
+
+[node name="Level_NAV" type="Node3D" unique_id=105528715]
+script = ExtResource("1_3doal")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=142049342]
+navigation_mesh = SubResource("NavigationMesh_nlfv2")
+
+[node name="Floor" type="GridMap" parent="NavigationRegion3D" unique_id=1490303842]
+mesh_library = ExtResource("1_tdt65")
+bake_navigation = true
+data = {
+"cells": PackedInt32Array(65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 3, 65534, 0, 4, 65534, 0, 4, 65533, 0, 5, 65533, 0, 6, 65533, 0, 6, 65532, 0, 6, 65531, 0, 7, 65531, 0, 7, 65532, 0, 7, 65533, 0, 7, 65534, 0, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 7, 4, 0, 7, 5, 0, 7, 6, 0, 6, 6, 0, 5, 6, 0, 4, 6, 0, 3, 6, 0, 2, 6, 0, 1, 6, 0, 0, 6, 0, 65533, 65534, 0, 65533, 65533, 0, 65533, 65532, 0, 65532, 65532, 0, 65531, 65532, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65533, 0, 0, 65533, 1, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 10, 2, 0, 11, 2, 0, 11, 3, 0, 11, 4, 0, 10, 4, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 0, 11, 65534, 0, 12, 65534, 0, 13, 65534, 0, 14, 65534, 0, 15, 65533, 0, 15, 65534, 0, 15, 65532, 0, 16, 65532, 0, 17, 65532, 0, 17, 65533, 0, 17, 65534, 0, 17, 65535, 0, 17, 0, 0, 17, 1, 0, 17, 2, 0, 16, 2, 0, 15, 2, 0, 14, 2, 0, 14, 3, 0, 13, 3, 0, 13, 2, 0, 12, 3, 0)
+}
+
+[node name="TempPlayer" parent="." unique_id=976230552 instance=ExtResource("2_3doal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -2)
+
+[node name="CameraPosition" type="Node3D" parent="." unique_id=802681126]
+script = ExtResource("3_38k8w")
+
+[node name="CameraRotationX" type="Node3D" parent="CameraPosition" unique_id=268974741]
+
+[node name="ZoomPositionPivot" type="Node3D" parent="CameraPosition/CameraRotationX" unique_id=1697470955]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 20, 40)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPosition/CameraRotationX/ZoomPositionPivot" unique_id=230270114]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=252203002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 60, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1734360065]

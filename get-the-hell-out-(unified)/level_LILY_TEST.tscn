@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://damh3dtoru8jp"]
+
+[ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="1_4obmp"]
+[ext_resource type="MeshLibrary" uid="uid://dlderf1icmkxw" path="res://assets_3d/placeholders_3d/placeholder_3d_test.tres" id="1_rhvu7"]
+[ext_resource type="PackedScene" uid="uid://r30bv5igdukn" path="res://temp_player.tscn" id="2_m4byj"]
+[ext_resource type="PackedScene" uid="uid://dqdf0e0jiwvm8" path="res://in_game_ui.tscn" id="4_m4byj"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_rhvu7"]
+vertices = PackedVector3Array(12.25, 1.8494118, -6, 11, 1.8494118, -5.75, 11, 1.8494118, -4.25, 14.25, 1.8494118, -4, 14.25, 1.8494118, 4, 15.75, 1.8494118, 4, 15.75, 1.8494118, -2, 18, 1.8494118, -2.25, 18, 1.8494118, -3.75, 15.75, 1.8494118, -4, 15.75, 1.8494118, -9.75, 12.25, 1.8494118, -9.75, -8, 1.8494118, 5.75, -8, 1.8494118, 4.25, -10.25, 1.8494118, 4, -11.75, 1.8494118, 5.75, -10.25, 1.8494118, -6, -11.75, 1.8494118, -7.75, -8, 1.8494118, -6.25, -8, 1.8494118, -7.75, -5.75, 1.8494118, 4, -4.25, 1.8494118, 5.75, -5.75, 1.8494118, -6, -4.25, 1.8494118, 0, -4.25, 1.8494118, -2, -2, 1.8494118, -0.25, -2, 1.8494118, -1.75, -4.25, 1.8494118, -7.75, 31.75, 1.8494118, -6, 33, 1.8494118, -6.25, 33, 1.8494118, -7.75, 30.25, 1.8494118, -7.75, 31.75, 1.8494118, -2.25, 30, 1.8494118, -3.75, 26.25, 1.8494118, 6, 25, 1.8494118, 6.25, 25, 1.8494118, 7.75, 29.75, 1.8494118, 7.75, 30, 1.8494118, 5.75, 34.25, 1.8494118, -6, 35.75, 1.8494118, -7.75, 26.25, 1.8494118, 4.25, 34.25, 1.8494118, 4, 35.75, 1.8494118, 5.75, 9.75, 1.8494118, -4, 8.25, 1.8494118, -5.75, 8.25, 1.8494118, -4, 7.75, 1.8494118, -2, 6.25, 1.8494118, -3.75, 6, 1.8494118, -1.75, 7.75, 1.8494118, -0.25, 9.75, 1.8494118, -2.25, 23.75, 1.8494118, 8, 23.75, 1.8494118, 6, 20, 1.8494118, 6.25, 20, 1.8494118, 7.75, 23.75, 1.8494118, 4.25, 20.25, 1.8494118, 4.25, 14.25, 1.8494118, 10, 15.75, 1.8494118, 10, 16, 1.8494118, 7.75, 16, 1.8494118, 6.25, 20.25, 1.8494118, 9.75, 23.75, 1.8494118, 9.75, 14, 1.8494118, 12.25, 15.75, 1.8494118, 13.75, 0.25, 1.8494118, 12.25, 0.25, 1.8494118, 13.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 3), PackedInt32Array(3, 9, 6), PackedInt32Array(6, 9, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(3, 0, 9), PackedInt32Array(9, 0, 11), PackedInt32Array(9, 11, 10), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(14, 15, 16), PackedInt32Array(16, 15, 17), PackedInt32Array(18, 16, 19), PackedInt32Array(19, 16, 17), PackedInt32Array(13, 20, 12), PackedInt32Array(12, 20, 21), PackedInt32Array(24, 23, 22), PackedInt32Array(22, 23, 20), PackedInt32Array(25, 23, 26), PackedInt32Array(26, 23, 24), PackedInt32Array(24, 22, 27), PackedInt32Array(18, 19, 22), PackedInt32Array(22, 19, 27), PackedInt32Array(23, 21, 20), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(8, 33, 7), PackedInt32Array(7, 33, 32), PackedInt32Array(32, 33, 28), PackedInt32Array(28, 33, 31), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(37, 34, 38), PackedInt32Array(29, 30, 39), PackedInt32Array(39, 30, 40), PackedInt32Array(38, 34, 41), PackedInt32Array(43, 38, 42), PackedInt32Array(42, 38, 41), PackedInt32Array(39, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(2, 44, 1), PackedInt32Array(1, 44, 46), PackedInt32Array(1, 46, 45), PackedInt32Array(49, 48, 47), PackedInt32Array(47, 48, 46), PackedInt32Array(26, 49, 25), PackedInt32Array(25, 49, 50), PackedInt32Array(44, 51, 46), PackedInt32Array(46, 51, 47), PackedInt32Array(49, 47, 50), PackedInt32Array(36, 52, 35), PackedInt32Array(35, 52, 53), PackedInt32Array(53, 52, 55), PackedInt32Array(53, 55, 54), PackedInt32Array(56, 53, 57), PackedInt32Array(57, 53, 54), PackedInt32Array(5, 61, 4), PackedInt32Array(4, 61, 60), PackedInt32Array(4, 60, 59), PackedInt32Array(4, 59, 58), PackedInt32Array(61, 54, 60), PackedInt32Array(60, 54, 55), PackedInt32Array(63, 62, 52), PackedInt32Array(52, 62, 55), PackedInt32Array(58, 59, 64), PackedInt32Array(64, 59, 65), PackedInt32Array(66, 64, 67), PackedInt32Array(67, 64, 65)]
+agent_radius = 0.1
+
+[sub_resource type="Environment" id="Environment_rhvu7"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_m4byj"]
+
+[sub_resource type="Compositor" id="Compositor_wttod"]
+
+[node name="level_TEST_LILY" type="Node3D" unique_id=1484970297]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=228087330]
+navigation_mesh = SubResource("NavigationMesh_rhvu7")
+
+[node name="Floor" type="GridMap" parent="NavigationRegion3D" unique_id=1525172367]
+mesh_library = ExtResource("1_rhvu7")
+bake_navigation = true
+data = {
+"cells": PackedInt32Array(65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 3, 65534, 0, 4, 65534, 0, 4, 65533, 0, 5, 65533, 0, 6, 65533, 0, 6, 65532, 0, 6, 65531, 0, 7, 65531, 0, 7, 65532, 0, 7, 65533, 0, 7, 65534, 0, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 7, 4, 0, 7, 5, 0, 7, 6, 0, 6, 6, 0, 5, 6, 0, 4, 6, 0, 3, 6, 0, 2, 6, 0, 1, 6, 0, 0, 6, 0, 65533, 65534, 0, 65533, 65533, 0, 65533, 65532, 0, 65532, 65532, 0, 65531, 65532, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65533, 0, 0, 65533, 1, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 10, 2, 0, 11, 2, 0, 11, 3, 0, 11, 4, 0, 10, 4, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 0, 11, 65534, 0, 12, 65534, 0, 13, 65534, 0, 14, 65534, 0, 15, 65533, 0, 15, 65534, 0, 15, 65532, 0, 16, 65532, 0, 17, 65532, 0, 17, 65533, 0, 17, 65534, 0, 17, 65535, 0, 17, 0, 0, 17, 1, 0, 17, 2, 0, 16, 2, 0, 15, 2, 0, 14, 2, 0, 14, 3, 0, 13, 3, 0, 13, 2, 0, 12, 3, 0)
+}
+
+[node name="playerGroup" type="Node3D" parent="." unique_id=1264590044]
+
+[node name="TempPlayer" parent="playerGroup" unique_id=976230552 instance=ExtResource("2_m4byj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8578079, -1.1567245)
+
+[node name="enemyGroup" type="Node3D" parent="." unique_id=965952294]
+
+[node name="levelCamera" type="Node3D" parent="." unique_id=731218014]
+script = ExtResource("1_4obmp")
+
+[node name="CameraRotationX" type="Node3D" parent="levelCamera" unique_id=1059420609]
+
+[node name="ZoomPositionPivot" type="Node3D" parent="levelCamera/CameraRotationX" unique_id=750140884]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 20, 40)
+
+[node name="Camera3D" type="Camera3D" parent="levelCamera/CameraRotationX/ZoomPositionPivot" unique_id=1518483916]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1110708453]
+transform = Transform3D(1, 0, 0, 0, 0.41138715, 0.9114607, 0, -0.9114607, 0.41138715, 33.882935, 20.868147, 6.2270985)
+light_energy = 3.98
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1882341066]
+environment = SubResource("Environment_rhvu7")
+camera_attributes = SubResource("CameraAttributesPractical_m4byj")
+compositor = SubResource("Compositor_wttod")
+
+[node name="inGameUI" parent="." unique_id=1237099971 instance=ExtResource("4_m4byj")]

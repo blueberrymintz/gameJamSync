@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Get_The_Hell_Out_(Unified)"
+<<<<<<< Updated upstream
 run/main_scene="uid://ci10p8qbhhwll"
+=======
+run/main_scene="uid://damh3dtoru8jp"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

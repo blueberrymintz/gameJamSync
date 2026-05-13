@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dqdf0e0jiwvm8"]
+
+[ext_resource type="Texture2D" uid="uid://8wm7mbhpk2qp" path="res://assets_2d/ui_Icons/attackIcon.png" id="1_0qsvx"]
+[ext_resource type="Script" uid="uid://dip5ikf5f4vkj" path="res://attack_button.gd" id="2_uusyb"]
+[ext_resource type="Texture2D" uid="uid://clkrd5d2ja47j" path="res://assets_2d/ui_Icons/moveIcon.png" id="3_ep3pr"]
+[ext_resource type="Script" uid="uid://ceengi2d5voor" path="res://move_button.gd" id="4_dpq86"]
+[ext_resource type="Texture2D" uid="uid://balqmsswyr0nr" path="res://assets_2d/ui_Icons/nextIcon.png" id="5_l8h7b"]
+[ext_resource type="Script" uid="uid://drfm3wmdeld4y" path="res://next_button.gd" id="6_ukwlx"]
+
+[node name="inGameUI" type="Control" unique_id=1237099971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=90204512]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 52.0
+offset_right = 472.0
+offset_bottom = 1528.0
+scale = Vector2(0.2, 0.2)
+
+[node name="attack_button" type="TextureButton" parent="VBoxContainer" unique_id=764999322]
+layout_mode = 2
+texture_normal = ExtResource("1_0qsvx")
+stretch_mode = 0
+script = ExtResource("2_uusyb")
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer" unique_id=1685544666]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="move_button" type="TextureButton" parent="VBoxContainer" unique_id=1032484907]
+layout_mode = 2
+texture_normal = ExtResource("3_ep3pr")
+stretch_mode = 0
+script = ExtResource("4_dpq86")
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer" unique_id=647539656]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="next_button" type="TextureButton" parent="VBoxContainer" unique_id=832071582]
+layout_mode = 2
+texture_normal = ExtResource("5_l8h7b")
+stretch_mode = 0
+script = ExtResource("6_ukwlx")

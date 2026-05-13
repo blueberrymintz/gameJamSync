@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://r30bv5igdukn"]
+
+[ext_resource type="Script" uid="uid://dyxx68pbfqst1" path="res://temp_player.gd" id="1_aqm4m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2qy7u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gads"]
+
+[node name="TempPlayer" type="CharacterBody3D" unique_id=976230552]
+script = ExtResource("1_aqm4m")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=704861698]
+mesh = SubResource("BoxMesh_2qy7u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=668625333]
+shape = SubResource("BoxShape3D_0gads")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1376780742]
+path_desired_distance = 0.5
