@@ -1,9 +1,38 @@
 [gd_scene format=3 uid="uid://c31ix2se1wbsl"]
 
-[node name="Control" type="Control" unique_id=788634310]
+[ext_resource type="Texture2D" uid="uid://bm7gg22f24652" path="res://assets_2d/creditsBackground.png" id="1_c1t8d"]
+[ext_resource type="Script" uid="uid://bqju834peojb2" path="res://credits_menu.gd" id="1_g4wvt"]
+[ext_resource type="Texture2D" uid="uid://bu478abu8whx" path="res://assets_2d/menuButton.png" id="2_g4wvt"]
+
+[node name="credits_menu" type="Control" unique_id=788634310]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g4wvt")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=185271161]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.1110001
+anchor_bottom = 1.235
+offset_right = -128.87207
+offset_bottom = -154.28003
+scale = Vector2(0.456, 0.4)
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer" unique_id=375645918]
+layout_mode = 2
+texture = ExtResource("1_c1t8d")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1916808818]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 511.0
+offset_right = 1514.0
+offset_bottom = 855.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_g4wvt")
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_button_credits_pressed"]
