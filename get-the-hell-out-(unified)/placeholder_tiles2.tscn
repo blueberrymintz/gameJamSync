@@ -1,53 +1,6 @@
 [gd_scene format=4 uid="uid://tkbap8hds8h5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0h4t4"]
-rim_enabled = true
-rim = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_o5ybj"]
-_surfaces = [{
-"aabb": AABB(-1, -0.15058815, -1, 2, 0.5135293, 2),
-"format": 34896613377,
-"index_count": 18,
-"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAwAEAAEAAgAEAAUAAwAGAAQA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 7,
-"vertex_data": PackedByteArray("//8AAAAAAAD///////8AAP////8AAAAA//8AAP//AAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_7pld7"]
-resource_name = "placeholder_tiles_Cube"
-_surfaces = [{
-"aabb": AABB(-1, -0.15058815, -1, 2, 0.5135293, 2),
-"attribute_data": PackedByteArray("/v8AALHLscuxywAA/v+xy7HL/v8AALHLscuxywAA/v+xywAAAACxywAAAACxy7HL"),
-"format": 34896613399,
-"index_count": 18,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkA"),
-"material": SubResource("StandardMaterial3D_0h4t4"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("//8AAAAAVNX///////9U1f////8AAFTV//8AAP//VNX//wAA//8AgAAA/////wCA////////AIAAAAAA//8AgP////8AAP+/AAD//////78AAP//AAD/v/////////+/qqpUVaqqVFWqqlRVqqpUVf9/////f////3////9///////9/////f////3////9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_o5ybj")
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_yx7ml"]
-vertices = PackedVector3Array(-1, 1.5, -0.25, -1, 1.5, 0.25, -0.25, 1.5, 0.25, -0.25, 1.5, -0.25, -0.25, 1.5, -1, 0.25, 1.5, -0.25, 0.25, 1.5, -1, -0.25, 1.5, 1, 0.25, 1.5, 1, 0.25, 1.5, 0.25, 1, 1.5, 0.25, 1, 1.5, -0.25)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(4, 5, 3), PackedInt32Array(9, 8, 2), PackedInt32Array(2, 8, 7), PackedInt32Array(2, 3, 9), PackedInt32Array(9, 3, 5), PackedInt32Array(5, 11, 9), PackedInt32Array(9, 11, 10)]
-sample_partition_type = 2
-agent_radius = 0.0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ktd2s"]
-size = Vector2(2, 0.1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_yx7ml"]
-size = Vector2(0.1, 2)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yx7ml"]
-data = PackedVector3Array(1, -0.1506, -1, 1, 0.3629, 1, 1, 0.3629, -1, 1, -0.1506, -1, 1, -0.1506, 1, 1, 0.3629, 1, 1, -0.1506, 1, -1, 0.3629, 1, 1, 0.3629, 1, 1, -0.1506, 1, -1, -0.1506, 1, -1, 0.3629, 1, 1, 0.3629, -1, -1, 0.3629, 1, -1, 0.3629, -1, 1, 0.3629, -1, 1, 0.3629, 1, -1, 0.3629, 1)
+[ext_resource type="PackedScene" uid="uid://bl5og5f8wd2kh" path="res://base_ground_tile.tscn" id="1_osspl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6doeh"]
 
@@ -437,26 +390,7 @@ shadow_mesh = SubResource("ArrayMesh_40osv")
 
 [node name="placeholder_tiles" type="Node3D" unique_id=1467689365]
 
-[node name="base_ground_tile_1" type="MeshInstance3D" parent="." unique_id=2038829149]
-transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("ArrayMesh_7pld7")
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="base_ground_tile_1" unique_id=538660369]
-navigation_mesh = SubResource("NavigationMesh_yx7ml")
-use_edge_connections = false
-
-[node name="navMesh1" type="MeshInstance3D" parent="base_ground_tile_1/NavigationRegion3D" unique_id=1304095237]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("PlaneMesh_ktd2s")
-
-[node name="navMesh2" type="MeshInstance3D" parent="base_ground_tile_1/NavigationRegion3D" unique_id=1098025521]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("PlaneMesh_yx7ml")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="base_ground_tile_1" unique_id=1970330619]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="base_ground_tile_1/StaticBody3D" unique_id=43676810]
-shape = SubResource("ConcavePolygonShape3D_yx7ml")
+[node name="base_ground_tile_1" parent="." unique_id=244930845 instance=ExtResource("1_osspl")]
 
 [node name="wall_1" type="MeshInstance3D" parent="." unique_id=606637096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)

@@ -118,7 +118,9 @@ func _input(event):
 		if result.is_empty():
 			print("empty result")
 		elif result and result.collider and result.collider.is_class("Area3D"):
-			result.collider.on_ray_hit()
+			print(result.collider.name)
+			print(result.position)
+			updateTargetLoc(result.collider.transform.origin)
 		else: 
 			print("Raycast hit:", result.collider.name)
 			if result.collider.name == "Floor":
@@ -126,4 +128,4 @@ func _input(event):
 				updateTargetLoc(Vector3(result.position.x, 2.5, result.position.z))
 				instance = overlayScene.instantiate()
 				instance.transform.origin = Vector3(result.position.x, 4.5, result.position.z)
-				
+				get_parent().add_child(instance)

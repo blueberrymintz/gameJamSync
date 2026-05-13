@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ciwvf3kv15lfo" path="res://navtest.gd" id="1_2qy7u"]
 [ext_resource type="MeshLibrary" uid="uid://bri27cc0om55i" path="res://assets_3d/placeholders_3d/placeholder_3d_baked.tres" id="1_nlfv2"]
 [ext_resource type="Script" uid="uid://dyxx68pbfqst1" path="res://temp_player.gd" id="2_4h6bl"]
+[ext_resource type="PackedScene" uid="uid://bl5og5f8wd2kh" path="res://base_ground_tile.tscn" id="2_qr7tn"]
 [ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="3_nlfv2"]
 [ext_resource type="PackedScene" uid="uid://ctxhj7yfccw2t" path="res://assets_3d/overlay_tile.tscn" id="4_0gads"]
 
@@ -25,15 +26,42 @@ script = ExtResource("1_2qy7u")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=142049342]
 navigation_mesh = SubResource("NavigationMesh_nlfv2")
 
-[node name="Floor" type="GridMap" parent="NavigationRegion3D" unique_id=1490303842]
-mesh_library = ExtResource("1_nlfv2")
-bake_navigation = true
-data = {
-"cells": PackedInt32Array(65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 3, 65534, 0, 4, 65534, 0, 4, 65533, 0, 5, 65533, 0, 6, 65533, 0, 6, 65532, 0, 6, 65531, 0, 7, 65531, 0, 7, 65532, 0, 7, 65533, 0, 7, 65534, 0, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 7, 4, 0, 7, 5, 0, 7, 6, 0, 6, 6, 0, 5, 6, 0, 4, 6, 0, 3, 6, 0, 2, 6, 0, 1, 6, 0, 0, 6, 0, 65533, 65534, 0, 65533, 65533, 0, 65533, 65532, 0, 65532, 65532, 0, 65531, 65532, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65533, 0, 0, 65533, 1, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 10, 2, 0, 11, 2, 0, 11, 3, 0, 11, 4, 0, 10, 4, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 0, 11, 65534, 0, 12, 65534, 0, 13, 65534, 0, 14, 65534, 0, 15, 65533, 0, 15, 65534, 0, 15, 65532, 0, 16, 65532, 0, 17, 65532, 0, 17, 65533, 0, 17, 65534, 0, 17, 65535, 0, 17, 0, 0, 17, 1, 0, 17, 2, 0, 16, 2, 0, 15, 2, 0, 14, 2, 0, 14, 3, 0, 13, 3, 0, 13, 2, 0, 12, 3, 0)
-}
+[node name="base_ground_tile_1" parent="NavigationRegion3D" unique_id=244930845 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="base_ground_tile_2" parent="NavigationRegion3D" unique_id=1657122675 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="base_ground_tile_3" parent="NavigationRegion3D" unique_id=1576463868 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -1)
+
+[node name="base_ground_tile_4" parent="NavigationRegion3D" unique_id=520531872 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="base_ground_tile_5" parent="NavigationRegion3D" unique_id=1059189045 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -9, 0, -1)
+
+[node name="base_ground_tile_6" parent="NavigationRegion3D" unique_id=1274101699 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -3)
+
+[node name="base_ground_tile_7" parent="NavigationRegion3D" unique_id=142749299 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="base_ground_tile_8" parent="NavigationRegion3D" unique_id=470560848 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -7)
+
+[node name="base_ground_tile_9" parent="NavigationRegion3D" unique_id=2094293205 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -11, 0, -1)
+
+[node name="base_ground_tile_10" parent="NavigationRegion3D" unique_id=144035536 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -13, 0, -1)
+
+[node name="base_ground_tile_11" parent="NavigationRegion3D" unique_id=1922105051 instance=ExtResource("2_qr7tn")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -15, 0, -1)
 
 [node name="TempPlayer" type="CharacterBody3D" parent="." unique_id=1796064656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -2)
+collision_layer = 7
 script = ExtResource("2_4h6bl")
 overlayScene = ExtResource("4_0gads")
 metadata/_edit_group_ = true
@@ -69,3 +97,11 @@ mesh = SubResource("SphereMesh_nlfv2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TempEnemy" unique_id=832116288]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -4)
 shape = SubResource("SphereShape3D_2qy7u")
+
+[node name="Floor" type="GridMap" parent="." unique_id=1490303842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 400, 0, 0)
+mesh_library = ExtResource("1_nlfv2")
+bake_navigation = true
+data = {
+"cells": PackedInt32Array(65533, 65535, 0, 65534, 65535, 0, 65535, 65535, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 3, 65534, 0, 4, 65534, 0, 4, 65533, 0, 5, 65533, 0, 6, 65533, 0, 6, 65532, 0, 6, 65531, 0, 7, 65531, 0, 7, 65532, 0, 7, 65533, 0, 7, 65534, 0, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 7, 4, 0, 7, 5, 0, 7, 6, 0, 6, 6, 0, 5, 6, 0, 4, 6, 0, 3, 6, 0, 2, 6, 0, 1, 6, 0, 0, 6, 0, 65533, 65534, 0, 65533, 65533, 0, 65533, 65532, 0, 65532, 65532, 0, 65531, 65532, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65530, 0, 0, 65530, 1, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65533, 0, 0, 65533, 1, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 10, 2, 0, 11, 2, 0, 11, 3, 0, 11, 4, 0, 10, 4, 0, 8, 65534, 0, 9, 65534, 0, 10, 65534, 0, 11, 65534, 0, 12, 65534, 0, 13, 65534, 0, 14, 65534, 0, 15, 65533, 0, 15, 65534, 0, 15, 65532, 0, 16, 65532, 0, 17, 65532, 0, 17, 65533, 0, 17, 65534, 0, 17, 65535, 0, 17, 0, 0, 17, 1, 0, 17, 2, 0, 16, 2, 0, 15, 2, 0, 14, 2, 0, 14, 3, 0, 13, 3, 0, 13, 2, 0, 12, 3, 0)
+}

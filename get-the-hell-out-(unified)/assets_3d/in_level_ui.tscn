@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://y1dvwf64lm2"]
+
+[ext_resource type="Texture2D" uid="uid://cnlsbsb70mfwu" path="res://assets_2d/attackIcon.png" id="1_ve06u"]
+[ext_resource type="Script" uid="uid://cfe1y6l8kkxx4" path="res://in_level_ui.gd" id="1_vjinv"]
+[ext_resource type="Texture2D" uid="uid://dywj208j2ohev" path="res://assets_2d/moveIcon.png" id="2_pwoxl"]
+[ext_resource type="Texture2D" uid="uid://dv8imsrg84i6g" path="res://assets_2d/nextIcon.png" id="3_vjinv"]
+[ext_resource type="Script" uid="uid://ccy20oc0vbn78" path="res://action_manager.gd" id="5_4fm4d"]
+
+[node name="in_level_UI" type="Control" unique_id=633890461]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjinv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=407282223]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.048
+anchor_right = 0.069000006
+anchor_bottom = 0.34500003
+offset_left = -0.12800026
+offset_top = -0.10400009
+offset_right = 356.512
+offset_bottom = 1089.44
+scale = Vector2(0.15, 0.15)
+
+[node name="attack_button" type="TextureButton" parent="VBoxContainer" unique_id=1993911147]
+layout_mode = 2
+texture_normal = ExtResource("1_ve06u")
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer" unique_id=1418981578]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+
+[node name="move_button" type="TextureButton" parent="VBoxContainer" unique_id=569427119]
+layout_mode = 2
+texture_normal = ExtResource("2_pwoxl")
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer" unique_id=793467592]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+
+[node name="next_button" type="TextureButton" parent="VBoxContainer" unique_id=182320638]
+layout_mode = 2
+texture_normal = ExtResource("3_vjinv")
+
+[node name="action_manager" type="Node" parent="." unique_id=1606388210]
+script = ExtResource("5_4fm4d")
+
+[connection signal="button_up" from="VBoxContainer/attack_button" to="." method="_attack_pressed"]
+[connection signal="button_up" from="VBoxContainer/move_button" to="." method="_move_pressed"]
+[connection signal="button_up" from="VBoxContainer/next_button" to="." method="_next_pressed"]
