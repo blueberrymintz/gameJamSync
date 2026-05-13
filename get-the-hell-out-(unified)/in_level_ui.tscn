@@ -3,12 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cnlsbsb70mfwu" path="res://assets_2d/attackIcon.png" id="1_ve06u"]
 [ext_resource type="Script" uid="uid://cfe1y6l8kkxx4" path="res://in_level_ui.gd" id="1_vjinv"]
 [ext_resource type="Texture2D" uid="uid://dywj208j2ohev" path="res://assets_2d/moveIcon.png" id="2_pwoxl"]
+[ext_resource type="Texture2D" uid="uid://cyfxric4shqpr" path="res://assets_2d/attackIconBlack.png" id="3_bn068"]
 [ext_resource type="Texture2D" uid="uid://dv8imsrg84i6g" path="res://assets_2d/nextIcon.png" id="3_vjinv"]
 [ext_resource type="Script" uid="uid://ccy20oc0vbn78" path="res://action_manager.gd" id="5_4fm4d"]
 [ext_resource type="Texture2D" uid="uid://bvam4tgsta0qc" path="res://assets_2d/p1Black.png" id="5_fm2ix"]
 [ext_resource type="Script" uid="uid://682w3tfleb00" path="res://player_select.gd" id="5_kwtf6"]
+[ext_resource type="Texture2D" uid="uid://fm34g7s3fufb" path="res://assets_2d/moveIconBlack.png" id="5_uygwb"]
 [ext_resource type="Texture2D" uid="uid://dr63kgcrkwes0" path="res://assets_2d/p1Fill.png" id="6_tbcib"]
 [ext_resource type="Texture2D" uid="uid://clksystpxi3ve" path="res://assets_2d/p2Black.png" id="7_kwtf6"]
+[ext_resource type="Texture2D" uid="uid://d2haexvi4cj2m" path="res://assets_2d/nextIconBlack.png" id="7_uemb7"]
 [ext_resource type="Texture2D" uid="uid://fl52botw1ufd" path="res://assets_2d/p2Fill.png" id="8_gkw1a"]
 [ext_resource type="Texture2D" uid="uid://ddv7n30q7vui8" path="res://assets_2d/p3Black.png" id="10_cr513"]
 [ext_resource type="Texture2D" uid="uid://bunu8fsimd3kl" path="res://assets_2d/p3Fill.png" id="11_uevhh"]
@@ -38,6 +41,7 @@ scale = Vector2(0.15, 0.15)
 [node name="attack_button" type="TextureButton" parent="playerActions" unique_id=1993911147]
 layout_mode = 2
 texture_normal = ExtResource("1_ve06u")
+texture_disabled = ExtResource("3_bn068")
 
 [node name="VSeparator" type="VSeparator" parent="playerActions" unique_id=1418981578]
 custom_minimum_size = Vector2(0, 75)
@@ -46,6 +50,7 @@ layout_mode = 2
 [node name="move_button" type="TextureButton" parent="playerActions" unique_id=569427119]
 layout_mode = 2
 texture_normal = ExtResource("2_pwoxl")
+texture_disabled = ExtResource("5_uygwb")
 
 [node name="VSeparator2" type="VSeparator" parent="playerActions" unique_id=793467592]
 custom_minimum_size = Vector2(0, 75)
@@ -54,6 +59,7 @@ layout_mode = 2
 [node name="next_button" type="TextureButton" parent="playerActions" unique_id=182320638]
 layout_mode = 2
 texture_normal = ExtResource("3_vjinv")
+texture_disabled = ExtResource("7_uemb7")
 
 [node name="playerSelect" type="HBoxContainer" parent="." unique_id=293091702]
 layout_mode = 0
