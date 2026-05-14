@@ -4,8 +4,8 @@ extends Control
 @onready var turnManager = $"turnManager"
 @onready var Player1Button = $HBoxContainer/player_1_button
 @onready var Player2Button = $HBoxContainer/player_2_button
-@onready var Player1 = $"turnManager/playerFaction/unit1"
-@onready var Player2 = $"turnManager/playerFaction/unit2"
+@onready var Player1 = $"turnManager/playerFaction/unitPlayer1"
+@onready var Player2 = $"turnManager/playerFaction/unitPlayer2"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -53,7 +53,7 @@ func _player_1_pressed() -> void:
 func _player_2_pressed() -> void:
 	Player2Button.grab_focus()
 	turnManager.printActiveUnits()
-	var foo: int = 1
+	var foo: int = 0
 	turnManager.passTurnTo(foo)
 	player.selectUnit(Player2)
 	print("player 2 pressed")
