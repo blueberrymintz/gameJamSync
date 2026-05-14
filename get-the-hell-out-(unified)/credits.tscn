@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c31ix2se1wbsl"]
 
-[ext_resource type="Texture2D" uid="uid://bm7gg22f24652" path="res://assets_2d/creditsBackground.png" id="1_c1t8d"]
-[ext_resource type="Script" uid="uid://bqju834peojb2" path="res://credits_menu.gd" id="1_g4wvt"]
+[ext_resource type="Script" path="res://credits_menu.gd" id="1_g4wvt"]
 [ext_resource type="Texture2D" uid="uid://bu478abu8whx" path="res://assets_2d/menuButton.png" id="2_g4wvt"]
+[ext_resource type="Texture2D" uid="uid://mfrnb11ktkbl" path="res://assets_2d/bigCredits.png" id="2_pjc1l"]
 [ext_resource type="PackedScene" uid="uid://doiua45dgikih" path="res://audio_stream_player.tscn" id="4_pjc1l"]
 
 [node name="credits_menu" type="Control" unique_id=788634310]
@@ -25,7 +25,7 @@ scale = Vector2(0.456, 0.4)
 
 [node name="TextureRect" type="TextureRect" parent="AspectRatioContainer" unique_id=375645918]
 layout_mode = 2
-texture = ExtResource("1_c1t8d")
+texture = ExtResource("2_pjc1l")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1916808818]
 layout_mode = 0
