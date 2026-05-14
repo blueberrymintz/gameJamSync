@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dtxiyt02hcl4"]
+
+[ext_resource type="Script" uid="uid://dmv7qeuv04km1" path="res://base_ground_tile_1.gd" id="1_86ex3"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_c3osh"]
+vertices = PackedVector3Array(-1, 1.5, -0.25, -1, 1.5, 0.25, -0.25, 1.5, 0.25, -0.25, 1.5, -0.25, -0.25, 1.5, -1, 0.25, 1.5, -0.25, 0.25, 1.5, -1, -0.25, 1.5, 1, 0.25, 1.5, 1, 0.25, 1.5, 0.25, 1, 1.5, 0.25, 1, 1.5, -0.25)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(4, 5, 3), PackedInt32Array(9, 8, 2), PackedInt32Array(2, 8, 7), PackedInt32Array(2, 3, 9), PackedInt32Array(9, 3, 5), PackedInt32Array(5, 11, 9), PackedInt32Array(9, 11, 10)]
+sample_partition_type = 2
+agent_radius = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dbaxo"]
+size = Vector2(2, 0.1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y5kp2"]
+size = Vector2(0.1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lep4s"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s80d3"]
+size = Vector3(2, 1, 2)
+
+[node name="floor" type="Node3D" unique_id=1185069234]
+script = ExtResource("1_86ex3")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=738832108]
+visible = false
+navigation_mesh = SubResource("NavigationMesh_c3osh")
+use_edge_connections = false
+
+[node name="navMesh1" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1719815552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("PlaneMesh_dbaxo")
+
+[node name="navMesh2" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1766893925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("PlaneMesh_y5kp2")
+
+[node name="Occupied" type="Area3D" parent="." unique_id=1372822929]
+visible = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Occupied" unique_id=1593947566]
+shape = SubResource("BoxShape3D_lep4s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=702120415]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1648103409]
+shape = SubResource("BoxShape3D_s80d3")
