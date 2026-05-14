@@ -52,7 +52,10 @@ size = Vector2(0.1, 2)
 data = PackedVector3Array(1, -0.1506, -1, 1, 0.3629, 1, 1, 0.3629, -1, 1, -0.1506, -1, 1, -0.1506, 1, 1, 0.3629, 1, 1, -0.1506, 1, -1, 0.3629, 1, 1, 0.3629, 1, 1, -0.1506, 1, -1, -0.1506, 1, -1, 0.3629, 1, 1, 0.3629, -1, -1, 0.3629, 1, -1, 0.3629, -1, 1, 0.3629, -1, 1, 0.3629, 1, -1, 0.3629, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xnj3q"]
-size = Vector3(2, 10, 2)
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qaxd7"]
+size = Vector3(2, 1, 2)
 
 [node name="base_ground_tile_1" type="MeshInstance3D" unique_id=244930845]
 transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, 0, 0, 0)
@@ -60,6 +63,7 @@ mesh = SubResource("ArrayMesh_7pld7")
 script = ExtResource("1_qaxd7")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1720384962]
+visible = false
 navigation_mesh = SubResource("NavigationMesh_yx7ml")
 use_edge_connections = false
 
@@ -71,16 +75,23 @@ mesh = SubResource("PlaneMesh_ktd2s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("PlaneMesh_yx7ml")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1024899298]
+[node name="Area3D" type="Area3D" parent="." unique_id=413631899]
+visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=50168316]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=50168316]
 shape = SubResource("ConcavePolygonShape3D_yx7ml")
 
 [node name="Occupied" type="Area3D" parent="." unique_id=630927912]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Occupied" unique_id=412951145]
 shape = SubResource("BoxShape3D_xnj3q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=767611301]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1760258771]
+shape = SubResource("BoxShape3D_qaxd7")
 
 [connection signal="body_entered" from="Occupied" to="." method="_on_occupied_body_entered"]

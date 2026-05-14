@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://wyx3eis8y2qh"]
+
+[ext_resource type="Script" uid="uid://d0hku3txmrc5e" path="res://camera_position.gd" id="1_gggue"]
+
+[node name="CameraPosition" type="Node3D" unique_id=623100890]
+script = ExtResource("1_gggue")
+
+[node name="CameraRotationX" type="Node3D" parent="." unique_id=762449062]
+
+[node name="ZoomPositionPivot" type="Node3D" parent="CameraRotationX" unique_id=1015349846]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 20, 40)
+
+[node name="Camera3D" type="Camera3D" parent="CameraRotationX/ZoomPositionPivot" unique_id=1006887551]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ch872vu1v3wtr"]
+
+[ext_resource type="PackedScene" uid="uid://bl5og5f8wd2kh" path="res://base_ground_tile.tscn" id="1_nancv"]
+
+[node name="Node3D" type="Node3D" unique_id=627717604]
+
+[node name="base_ground_tile_1" parent="." unique_id=244930845 instance=ExtResource("1_nancv")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="base_ground_tile_2" parent="." unique_id=885104232 instance=ExtResource("1_nancv")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="base_ground_tile_3" parent="." unique_id=1029232806 instance=ExtResource("1_nancv")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -3, 0, -1)

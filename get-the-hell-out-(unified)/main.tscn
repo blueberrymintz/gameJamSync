@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dcmu83bmnucq1"]
+
+[ext_resource type="Script" uid="uid://b02ogse0lulti" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c7jki806ow6tx" path="res://unit.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://d2gseeeo0alqb" path="res://player.gd" id="2_5vw27"]
+[ext_resource type="PackedScene" uid="uid://y1dvwf64lm2" path="res://in_level_ui.tscn" id="2_272bh"]
+[ext_resource type="PackedScene" uid="uid://cci12nik3jyyw" path="res://test_level.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bejbsuurkcq7v" path="res://faction.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://wyx3eis8y2qh" path="res://playerCamera.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://c2pxk6hythlhk" path="res://turn_manager.gd" id="6_7mycd"]
+
+[node name="world" type="Node3D" unique_id=1648522574]
+script = ExtResource("1_ig7tw")
+
+[node name="player" type="Node3D" parent="." unique_id=1663922272]
+script = ExtResource("2_5vw27")
+
+[node name="in_level_UI" parent="player" unique_id=633890461 instance=ExtResource("2_272bh")]
+
+[node name="turnManager" type="Node3D" parent="player/in_level_UI" unique_id=1707182083 node_paths=PackedStringArray("playerFaction", "hellFaction", "environmentFaction")]
+script = ExtResource("6_7mycd")
+playerFaction = NodePath("playerFaction")
+hellFaction = NodePath("hellFaction")
+environmentFaction = NodePath("environmentFaction")
+
+[node name="playerFaction" parent="player/in_level_UI/turnManager" unique_id=670177426 instance=ExtResource("3_lquwl")]
+
+[node name="unit1" parent="player/in_level_UI/turnManager/playerFaction" unique_id=1989301981 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3.353818, -0.6082622)
+baseMaxHealth = 10
+baseDamage = 1
+baseMovement = 5
+
+[node name="playerCamera" parent="player/in_level_UI/turnManager/playerFaction" unique_id=623100890 instance=ExtResource("4_1bvp3")]
+
+[node name="unit2" parent="player/in_level_UI/turnManager/playerFaction" unique_id=630903760 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1462336, 3.418504, 0.20724583)
+
+[node name="hellFaction" parent="player/in_level_UI/turnManager" unique_id=138814230 instance=ExtResource("3_lquwl")]
+displayName = "Hell"
+
+[node name="environmentFaction" parent="player/in_level_UI/turnManager" unique_id=1805325114 instance=ExtResource("3_lquwl")]
+displayName = "Environment"
+
+[node name="testLevel" parent="player/in_level_UI/turnManager/environmentFaction" unique_id=798154614 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, 0)

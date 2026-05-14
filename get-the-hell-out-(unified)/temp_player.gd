@@ -120,7 +120,10 @@ func _input(event):
 		elif result and result.collider and result.collider.is_class("Area3D"):
 			print(result.collider.name)
 			print(result.position)
-			updateTargetLoc(result.collider.transform.origin)
+			#updateTargetLoc(result.collider.global_position)
+			print(result.collider.global_position)
+			position = result.collider.global_position
+			
 		else: 
 			print("Raycast hit:", result.collider.name)
 			if result.collider.name == "Floor":

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cci12nik3jyyw"]
+
+[ext_resource type="NavigationMesh" uid="uid://by4jurp0r8ocy" path="res://nav_mesh_layers.tres" id="1_1c2mv"]
+[ext_resource type="PackedScene" uid="uid://bl5og5f8wd2kh" path="res://base_ground_tile.tscn" id="2_f7g2b"]
+
+[node name="testLevel" type="NavigationRegion3D" unique_id=798154614]
+navigation_mesh = ExtResource("1_1c2mv")
+
+[node name="base_ground_tile_1" parent="." unique_id=244930845 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="base_ground_tile_2" parent="." unique_id=750169532 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="base_ground_tile_3" parent="." unique_id=313460659 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -1)
+
+[node name="base_ground_tile_4" parent="." unique_id=227937616 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="base_ground_tile_5" parent="." unique_id=1449421686 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -9, 0, -1)
+
+[node name="base_ground_tile_6" parent="." unique_id=2133657668 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -3)
+
+[node name="base_ground_tile_7" parent="." unique_id=1762070806 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="base_ground_tile_8" parent="." unique_id=898983384 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -5, 0, -7)
+
+[node name="base_ground_tile_9" parent="." unique_id=1111309902 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -11, 0, -1)
+
+[node name="base_ground_tile_10" parent="." unique_id=61850269 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -13, 0, -1)
+
+[node name="base_ground_tile_11" parent="." unique_id=2138336739 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -15, 0, -1)
+
+[node name="base_ground_tile_12" parent="." unique_id=1611647358 instance=ExtResource("2_f7g2b")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, 1, 0, -1)

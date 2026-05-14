@@ -1,0 +1,6 @@
+[gd_resource type="NavigationMesh" format=3 uid="uid://by4jurp0r8ocy"]
+
+[resource]
+sample_partition_type = 2
+geometry_parsed_geometry_type = 1
+agent_radius = 0.0

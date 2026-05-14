@@ -2,7 +2,8 @@ extends MeshInstance3D
 
 @onready var occupied = $Occupied
 @onready var green_material = preload("res://assets_3d/green_material_3d.tres")
-
+@onready var selected : bool = true
+var type = "terrain"
 
 
 # Called when the node enters the scene tree for the first time.
