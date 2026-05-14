@@ -13,7 +13,7 @@ const JUMP_VELOCITY = 4.5
 var maxHealth : int = 1
 var currentHealth : int = 1
 var damage : int = 1
-var movement : int = 1
+var maxMovement : int = 1
 var currentMovement : int = 1
 var type = "unit"
 var wait : bool = false
@@ -31,13 +31,13 @@ func clearSelect():
 func initTurn():
 	print(name," ",currentMovement)
 	startPos = position
-	currentMovement = movement
+	currentMovement = maxMovement
 
 func _ready() -> void:
 	maxHealth = baseMaxHealth
 	currentHealth = maxHealth
 	damage = baseDamage
-	movement = baseMovement
+	maxMovement = baseMovement
 	currentMovement = baseMovement
 	initTurn()
 	
