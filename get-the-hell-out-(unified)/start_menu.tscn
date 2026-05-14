@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ctt1rjk3tolkh"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_v2mkm"]
+[ext_resource type="Script" uid="uid://cvotrwvs6ggrl" path="res://start_menu.gd" id="1_v2mkm"]
 [ext_resource type="Texture2D" uid="uid://wu2uluvceh7b" path="res://assets_2d/menuBackground.png" id="1_vpdu5"]
 [ext_resource type="Texture2D" uid="uid://t5fudsuiivfx" path="res://assets_2d/startButton.png" id="2_v2mkm"]
 [ext_resource type="Texture2D" uid="uid://5jrqxetx8dym" path="res://assets_2d/creditsButton.png" id="3_ctwoq"]
-[ext_resource type="PackedScene" path="res://audio_stream_player.tscn" id="5_ctwoq"]
+[ext_resource type="PackedScene" uid="uid://doiua45dgikih" path="res://audio_stream_player.tscn" id="5_ctwoq"]
 
 [node name="Start_Menu" type="Control" unique_id=1794789802]
 layout_mode = 3
