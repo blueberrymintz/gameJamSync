@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dywj208j2ohev" path="res://assets_2d/moveIcon.png" id="2_pwoxl"]
 [ext_resource type="Texture2D" uid="uid://dv8imsrg84i6g" path="res://assets_2d/nextIcon.png" id="3_vjinv"]
 [ext_resource type="Script" uid="uid://ccy20oc0vbn78" path="res://action_manager.gd" id="5_4fm4d"]
+[ext_resource type="Texture2D" uid="uid://bvam4tgsta0qc" path="res://assets_2d/p1Black.png" id="5_fm2ix"]
+[ext_resource type="Texture2D" uid="uid://dr63kgcrkwes0" path="res://assets_2d/p1Fill.png" id="6_kwtf6"]
+[ext_resource type="Texture2D" uid="uid://clksystpxi3ve" path="res://assets_2d/p2Black.png" id="7_gkw1a"]
+[ext_resource type="Texture2D" uid="uid://fl52botw1ufd" path="res://assets_2d/p2Fill.png" id="8_cr513"]
 
 [node name="in_level_UI" type="Control" unique_id=633890461]
 layout_mode = 3
@@ -23,9 +27,9 @@ anchor_top = 0.048
 anchor_right = 0.069000006
 anchor_bottom = 0.34500003
 offset_left = -0.12800026
-offset_top = -0.10400009
+offset_top = 118.895996
 offset_right = 356.512
-offset_bottom = 1089.44
+offset_bottom = 1352.44
 scale = Vector2(0.15, 0.15)
 
 [node name="attack_button" type="TextureButton" parent="VBoxContainer" unique_id=1993911147]
@@ -48,9 +52,32 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("3_vjinv")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1423882773]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 1048.0
+offset_bottom = 420.0
+scale = Vector2(0.2, 0.2)
+
+[node name="player_1_button" type="TextureButton" parent="HBoxContainer" unique_id=55235659]
+layout_mode = 2
+texture_normal = ExtResource("5_fm2ix")
+texture_focused = ExtResource("6_kwtf6")
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer" unique_id=717873858]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="player_2_button" type="TextureButton" parent="HBoxContainer" unique_id=2090982747]
+layout_mode = 2
+texture_normal = ExtResource("7_gkw1a")
+texture_focused = ExtResource("8_cr513")
+
 [node name="action_manager" type="Node" parent="." unique_id=1606388210]
 script = ExtResource("5_4fm4d")
 
 [connection signal="button_up" from="VBoxContainer/attack_button" to="." method="_attack_pressed"]
 [connection signal="button_up" from="VBoxContainer/move_button" to="." method="_move_pressed"]
 [connection signal="button_up" from="VBoxContainer/next_button" to="." method="_next_pressed"]
+[connection signal="button_up" from="HBoxContainer/player_1_button" to="." method="_player_1_pressed"]
+[connection signal="button_up" from="HBoxContainer/player_2_button" to="." method="_player_2_pressed"]
