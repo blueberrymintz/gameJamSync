@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvr3bc3m2cn8y"]
+
+[ext_resource type="PackedScene" uid="uid://2sytlvfi6s4n" path="res://unit_base.tscn" id="1_87d73"]
+[ext_resource type="PackedScene" uid="uid://c7ubath3ntebl" path="res://assets_3d/enemy/enemy_1.glb" id="2_66yqp"]
+
+[node name="unitEnemy" unique_id=1989301981 instance=ExtResource("1_87d73")]
+
+[node name="enemy_1" parent="." index="3" unique_id=317354441 instance=ExtResource("2_66yqp")]

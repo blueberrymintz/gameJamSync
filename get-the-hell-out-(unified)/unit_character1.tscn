@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://nbemwhroay8j"]
+
+[ext_resource type="PackedScene" uid="uid://2sytlvfi6s4n" path="res://unit_base.tscn" id="1_irc53"]
+[ext_resource type="PackedScene" uid="uid://b7et81sgpwmjv" path="res://assets_3d/character_1/character_1.glb" id="2_pg7r8"]
+
+[node name="unitBase" unique_id=1989301981 instance=ExtResource("1_irc53")]
+
+[node name="character_1" parent="." index="3" unique_id=774192016 instance=ExtResource("2_pg7r8")]

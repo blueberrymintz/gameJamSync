@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://2sytlvfi6s4n"]
+
+[ext_resource type="Script" uid="uid://dsqolwgxk5oon" path="res://unit.gd" id="1_ju6fh"]
+[ext_resource type="Material" uid="uid://bibw3c4a2rgjl" path="res://assets_3d/green_material_3d.tres" id="2_svo2k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gads"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5wnup"]
+material = ExtResource("2_svo2k")
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.1
+
+[node name="unitBase" type="CharacterBody3D" unique_id=1989301981]
+collision_layer = 7
+script = ExtResource("1_ju6fh")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2103196004]
+shape = SubResource("BoxShape3D_0gads")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=129149002]
+path_desired_distance = 0.5
+
+[node name="selectionCircle" type="MeshInstance3D" parent="." unique_id=957906604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CylinderMesh_5wnup")
