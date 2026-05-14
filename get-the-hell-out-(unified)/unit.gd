@@ -26,8 +26,8 @@ func clearSelect():
 	selected = false
 
 func initTurn():
-	var startPos = position
-	var currentMovement = movement
+	startPos = position
+	currentMovement = movement
 
 func _ready() -> void:
 	maxHealth = baseMaxHealth

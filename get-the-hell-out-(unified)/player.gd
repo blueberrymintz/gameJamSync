@@ -48,8 +48,13 @@ func _input(event):
 			if result.collider.get("type"):
 				print(result.collider.type)
 				if result.collider.type == "terrain":
-					print(result.collider.type)
-				elif result.collider.type == "unit":
+					if currentMode == "move" and pathByNode.size() - 2 < selectedUnit.movement:
+						selectedUnit.position = targetLoc
+						print(selectedUnit.movement)
+						selectedUnit.movement -= pathByNode.size() - 1
+						print(selectedUnit.movement)
+						pathNode.queue_free()
+				elif result.collider.type == "unit" and currentMode == "select":
 					if selectedUnit == result.collider:
 						pass
 					else:
@@ -100,9 +105,10 @@ func set_movement_target(target_position: Vector3):
 			for uniqueNode in stuffs:
 				if not uniqueNode.collider_id in pathByNode:
 					pathByNode.append(uniqueNode.collider_id)
-					if pathByNode.size() - 1 < selectedUnit.movement:
+					var locationVector = uniqueNode.collider.global_position
+					if pathByNode.size() - 2 < selectedUnit.movement and not pathByNode.size() == 1:
 						var instance = overlayNode.instantiate()
-						instance.transform.origin = Vector3(uniqueNode.collider.global_position.x, pathPoint.y, uniqueNode.collider.global_position.y)
+						instance.transform.origin = Vector3(locationVector.x, .2, locationVector.z)
 						pathNode.add_child(instance)
 		print(selectedUnit.movement)
 		print(pathByNode.size())
@@ -115,6 +121,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if pathNode and not currentMode == "move":
+		pathNode.queue_free()
+	if pathNode and not selectedUnit:
+		pathNode.queue_free()
 	if $in_level_UI/turnManager.activePlayer.isHuman and currentMode == "move":
 		var mouse_pos = get_viewport().get_mouse_position()
 		var ray_origin = camera.global_position

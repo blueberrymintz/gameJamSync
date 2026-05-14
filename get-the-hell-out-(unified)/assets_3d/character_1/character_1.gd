@@ -14,5 +14,5 @@ func _process(delta: float) -> void:
 
 
 
-func _on_animation_player_current_animation_changed(name: StringName) -> void:
+func _on_animation_player_current_animation_changed(animationName: StringName) -> void:
 	$AnimationPlayer.queue("idle_animation") # Replace with function body.
