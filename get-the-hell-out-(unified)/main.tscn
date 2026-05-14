@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bejbsuurkcq7v" path="res://faction.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://wyx3eis8y2qh" path="res://playerCamera.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://c2pxk6hythlhk" path="res://turn_manager.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://doiua45dgikih" path="res://audio_stream_player.tscn" id="9_kek77"]
 
 [node name="world" type="Node3D" unique_id=1648522574]
 script = ExtResource("1_ig7tw")
@@ -44,3 +45,11 @@ displayName = "Environment"
 
 [node name="testLevel" parent="player/in_level_UI/turnManager/environmentFaction" unique_id=798154614 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=612095783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8473587, 14.508641, 0)
+omni_range = 4096.0
+
+[node name="audio_manager" parent="." unique_id=103913394 instance=ExtResource("9_kek77")]
+
+[connection signal="ready" from="." to="audio_manager" method="Level_1_audio"]
