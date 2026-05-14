@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 4.5
 #unit attributes
 @export var baseMaxHealth : int
 @export var baseDamage : int
-@export var baseMovement : int
+@export var baseMovement : int = 0
 var maxHealth : int = 1
 var currentHealth : int = 1
 var damage : int = 1

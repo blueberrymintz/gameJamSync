@@ -13,6 +13,8 @@ var current_path_point: Vector3
 var current_path: PackedVector3Array
 @onready var overlayNode = preload("res://assets_3d/overlay_tile.tscn")
 var pathByNode :Array
+@onready var uiCall = $"in_level_UI"
+@onready var moveLabel = $"in_level_UI/moveCount"
 
 var funresult
 
@@ -53,7 +55,8 @@ func _input(event):
 						print(selectedUnit.movement)
 						selectedUnit.movement -= pathByNode.size() - 1
 						print(selectedUnit.movement)
-						pathNode.queue_free()
+						if pathNode:
+							pathNode.queue_free()
 				elif result.collider.type == "unit" and currentMode == "select":
 					if selectedUnit == result.collider:
 						pass
@@ -117,6 +120,10 @@ func set_movement_target(target_position: Vector3):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+func _passMovementAmount() -> void:
+	if(currentMode == "move"):
+		moveLabel.updateLabel()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

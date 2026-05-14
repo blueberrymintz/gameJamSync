@@ -4,8 +4,10 @@ extends Control
 @onready var turnManager = $"turnManager"
 @onready var Player1Button = $HBoxContainer/player_1_button
 @onready var Player2Button = $HBoxContainer/player_2_button
-@onready var Player1 = $"turnManager/playerFaction/unit1"
-@onready var Player2 = $"turnManager/playerFaction/unit2"
+@onready var Player1 = $"turnManager/playerFaction/unitPlayer1"
+@onready var Player2 = $"turnManager/playerFaction/unitPlayer2"
+@onready var unitEnemy = $"turnManager/hellFaction/unitEnemy"
+@onready var moveCounter = $"moveCount"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -62,7 +64,16 @@ func _player_2_pressed() -> void:
 	print("player 2 pressed")
 	
 	
-	
+func updateLabel() -> void:
+	if Player1.selected:
+		moveCounter.text = str(Player1.currentMovement)
+	if Player2.selected:
+		moveCounter.text = str(Player2.currentMovement)
+	if !Player1.selected && !Player2.selected:
+		moveCounter.text = ""
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	updateLabel()
 	pass
