@@ -7,9 +7,14 @@ extends Node3D
 
 @onready var factionArray : Array = [playerFaction, hellFaction, environmentFaction]
 
-var activeIndex : int = 0
+@export var activeIndex : int = 0
 
 @onready var activePlayer : Node3D = factionArray[activeIndex]
+
+
+
+
+
 
 func passTurn():
 	activePlayer.endTurn()
@@ -17,6 +22,20 @@ func passTurn():
 	if activeIndex >= factionArray.size():
 		activeIndex = 0
 	activePlayer = factionArray[activeIndex]
+	printActiveUnits()
+
+func passTurnTo(newIndex: int):
+	activePlayer.endTurn()
+	activeIndex = newIndex
+	if activeIndex >= factionArray.size():
+		print("passTurnTo() encountered an out of bounds error!")
+	activePlayer = factionArray[activeIndex]
+	printActiveUnits()
+
+func printActiveUnits():
+	print("active index: ", activeIndex)
+	print("active player: ", activePlayer)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

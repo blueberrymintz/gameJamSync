@@ -36,6 +36,19 @@ func _ready() -> void:
 	movement = baseMovement
 	initTurn()
 	
+func toggleSelect() -> void:
+	if selected:
+		selected = false
+	if !selected:
+		selected = true
+		
+func boolSelect(choice: bool) -> void:
+	if choice:
+		selected = true
+	if !choice:
+		selected = false
+	
+	
 func _process(delta: float) -> void:
 	if selected:
 		$selectionCircle.show()
