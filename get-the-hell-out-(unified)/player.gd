@@ -10,6 +10,7 @@ const RAY_LENGTH = 1000.0
 
 
 func _input(event):
+	
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
 		var camera3d = get_viewport().get_camera_3d()
 		var from = camera3d.project_ray_origin(event.position)
@@ -44,13 +45,16 @@ func _input(event):
 						pass
 					else:
 						selectUnit(result.collider)
-					
+	
 func selectUnit(unit):
 	if selectedUnit != unit:
 		if selectedUnit:
 			selectedUnit.clearSelect()
 		selectedUnit = unit
 		selectedUnit.select()
+	print(currentMode)
+	
+
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

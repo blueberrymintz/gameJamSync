@@ -44,8 +44,7 @@ func _player_1_pressed() -> void:
 	turnManager.printActiveUnits()
 	var foo: int = 0
 	turnManager.passTurnTo(foo)
-	Player1.boolSelect(true)
-	Player2.boolSelect(false)
+	player.selectUnit(Player1)
 	
 	print("player 1 pressed")
 	
@@ -56,9 +55,7 @@ func _player_2_pressed() -> void:
 	turnManager.printActiveUnits()
 	var foo: int = 1
 	turnManager.passTurnTo(foo)
-	Player2.boolSelect(true)
-	Player1.boolSelect(false)
-
+	player.selectUnit(Player2)
 	print("player 2 pressed")
 	
 	
