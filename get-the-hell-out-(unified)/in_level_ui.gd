@@ -28,10 +28,7 @@ func _move_pressed() -> void:
 	
 	
 func _next_pressed() -> void:
-	if player.currentMode == "next":
-		player.currentMode = "select"
-	else:
-		player.currentMode = "next"
+	$turnManager.passTurn()
 	print("next pressed")
 	
 func _player_1_pressed() -> void:

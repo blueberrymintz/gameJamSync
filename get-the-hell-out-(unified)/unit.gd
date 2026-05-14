@@ -16,6 +16,9 @@ var damage : int = 1
 var movement : int = 1
 var currentMovement : int = 1
 var type = "unit"
+var wait : bool = false
+
+@export var ai : Node3D
 
 var startPos
 
@@ -26,6 +29,7 @@ func clearSelect():
 	selected = false
 
 func initTurn():
+	print(name," ",currentMovement)
 	startPos = position
 	currentMovement = movement
 
@@ -34,6 +38,7 @@ func _ready() -> void:
 	currentHealth = maxHealth
 	damage = baseDamage
 	movement = baseMovement
+	currentMovement = baseMovement
 	initTurn()
 	
 func toggleSelect() -> void:

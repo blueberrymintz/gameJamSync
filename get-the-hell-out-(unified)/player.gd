@@ -48,11 +48,11 @@ func _input(event):
 			if result.collider.get("type"):
 				print(result.collider.type)
 				if result.collider.type == "terrain":
-					if currentMode == "move" and pathByNode.size() - 2 < selectedUnit.movement:
+					if currentMode == "move" and pathByNode.size() - 2 < selectedUnit.currentMovement:
 						selectedUnit.position = targetLoc
-						print(selectedUnit.movement)
-						selectedUnit.movement -= pathByNode.size() - 1
-						print(selectedUnit.movement)
+						print(selectedUnit.currentMovement)
+						selectedUnit.currentMovement -= pathByNode.size() - 1
+						print(selectedUnit.currentMovement)
 						pathNode.queue_free()
 				elif result.collider.type == "unit" and currentMode == "select":
 					if selectedUnit == result.collider:
@@ -106,11 +106,11 @@ func set_movement_target(target_position: Vector3):
 				if not uniqueNode.collider_id in pathByNode:
 					pathByNode.append(uniqueNode.collider_id)
 					var locationVector = uniqueNode.collider.global_position
-					if pathByNode.size() - 2 < selectedUnit.movement and not pathByNode.size() == 1:
+					if pathByNode.size() - 2 < selectedUnit.currentMovement and not pathByNode.size() == 1:
 						var instance = overlayNode.instantiate()
 						instance.transform.origin = Vector3(locationVector.x, .2, locationVector.z)
 						pathNode.add_child(instance)
-		print(selectedUnit.movement)
+		print(selectedUnit.currentMovement)
 		print(pathByNode.size())
 		
 	

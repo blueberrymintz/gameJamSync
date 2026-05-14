@@ -13,16 +13,19 @@ extends Node3D
 
 
 
+func _handle_endTurnSignal():
+	passTurn()
 
 
 
 func passTurn():
-	activePlayer.endTurn()
+	#activePlayer.endTurn()
 	activeIndex += 1
 	if activeIndex >= factionArray.size():
 		activeIndex = 0
 	activePlayer = factionArray[activeIndex]
 	printActiveUnits()
+	activePlayer.initTurn()
 
 func passTurnTo(newIndex: int):
 	activePlayer.endTurn()
@@ -31,6 +34,7 @@ func passTurnTo(newIndex: int):
 		print("passTurnTo() encountered an out of bounds error!")
 	activePlayer = factionArray[activeIndex]
 	printActiveUnits()
+	activePlayer.initTurn()
 
 func printActiveUnits():
 	print("active index: ", activeIndex)
@@ -39,10 +43,15 @@ func printActiveUnits():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	for faction in factionArray:
+		faction.endTurnSignal.connect(_handle_endTurnSignal)
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if activePlayer:
+		activePlayer.handleTurn()
+	else:
+		print("No Active Player")
 	pass
