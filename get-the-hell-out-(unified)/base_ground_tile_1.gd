@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends Node3D
 
 @onready var occupied = $Occupied
 @onready var green_material = preload("res://assets_3d/green_material_3d.tres")
@@ -19,4 +19,4 @@ func _process(delta: float) -> void:
 
 func _on_occupied_body_entered(body: Node3D) -> void:
 	print(body.name)
-	set_surface_override_material(0, green_material) # Replace with function body.
+	#set_surface_override_material(0, green_material) # Replace with function body.

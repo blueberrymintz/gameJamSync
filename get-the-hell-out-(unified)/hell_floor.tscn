@@ -81,6 +81,6 @@ shadow_mesh = SubResource("ArrayMesh_05jan")
 
 [node name="floor" unique_id=1185069234 instance=ExtResource("1_7hof8")]
 
-[node name="hell_floor" type="MeshInstance3D" parent="." index="3" unique_id=1801914824]
-transform = Transform3D(17, 0, 0, 0, -7.430936e-07, 3.4, 0, -17, -1.4861872e-07, 0.71102965, 0, 0.640625)
+[node name="hell_floor" type="MeshInstance3D" parent="." index="0" unique_id=1801914824]
+transform = Transform3D(18, 0, 0, 0, -7.86805e-07, 3.6, 0, -18, -1.57361e-07, 0.7549026, 0, 0.69958377)
 mesh = SubResource("ArrayMesh_3shpg")

@@ -1,0 +1,81 @@
+[gd_scene format=4 uid="uid://drw25avu2eaba"]
+
+[ext_resource type="Texture2D" uid="uid://des8t82f6wjka" path="res://assets_3d/tile_level_1/lava_texture.png" id="1_xg6e2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_718vj"]
+resource_name = "lave_floor"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_xg6e2")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = ExtResource("1_xg6e2")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uybxf"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, 0, 0.02, 0.02, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "lave_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjPArXI7wAAAAACtcjvArXI7wAAAAACtcjvArXIzwAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aly4d"]
+resource_name = "Plane"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, 0, 0.02, 0.02, 1e-05),
+"attribute_data": PackedByteArray("AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_718vj"),
+"name": "lave_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjPArXI7wAAAAACtcjvArXI7wAAAAACtcjvArXIzwAAAAA/3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uybxf")
+
+[node name="lavaBackground" type="Node3D" unique_id=1379257493]
+
+[node name="lava_background" type="MeshInstance3D" parent="." unique_id=549879787]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 0, -0.32133555, 0)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background2" type="MeshInstance3D" parent="." unique_id=355245737]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 44, -0.32133555, 0)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background3" type="MeshInstance3D" parent="." unique_id=1541533336]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, -44, -0.32133555, 0)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background4" type="MeshInstance3D" parent="." unique_id=589450697]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 0, -0.32133555, -44)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background5" type="MeshInstance3D" parent="." unique_id=1439568974]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 44, -0.32133555, -44)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background6" type="MeshInstance3D" parent="." unique_id=321859420]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, -44, -0.32133555, -44)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background7" type="MeshInstance3D" parent="." unique_id=966881696]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 0, -0.32133555, 44)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background8" type="MeshInstance3D" parent="." unique_id=1505297371]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, 44, -0.32133555, 44)
+mesh = SubResource("ArrayMesh_aly4d")
+
+[node name="lava_background9" type="MeshInstance3D" parent="." unique_id=326164852]
+transform = Transform3D(2207.1875, 0, 0, 0, -0.00026311725, 2207.1873, 0, -2207.1873, -0.00026311725, -44, -0.32133555, 44)
+mesh = SubResource("ArrayMesh_aly4d")
