@@ -31,14 +31,23 @@ hellFaction = NodePath("hellFaction")
 environmentFaction = NodePath("environmentFaction")
 
 [node name="playerFaction" parent="player/in_level_UI/turnManager" unique_id=670177426 instance=ExtResource("3_lquwl")]
+displayName = "Escapees"
+isHuman = true
 
 [node name="playerCamera" parent="player/in_level_UI/turnManager/playerFaction" unique_id=623100890 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 
 [node name="unitPlayer1" parent="player/in_level_UI/turnManager/playerFaction" unique_id=1989301981 instance=ExtResource("7_efxa6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9654803, 12.062158)
+baseMaxHealth = 5
+baseDamage = 1
+baseMovement = 1
 
 [node name="unitPlayer2" parent="player/in_level_UI/turnManager/playerFaction" unique_id=444606179 instance=ExtResource("7_efxa6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6761606, 0.8314303, 14.23821)
+baseMaxHealth = 5
+baseDamage = 5
+baseMovement = 2
 
 [node name="hellFaction" parent="player/in_level_UI/turnManager" unique_id=138814230 instance=ExtResource("3_lquwl")]
 displayName = "Hell"

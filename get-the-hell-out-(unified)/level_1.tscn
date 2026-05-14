@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxuoy1sw7fsd8" path="res://hell_floor.tscn" id="1_3hls8"]
 [ext_resource type="PackedScene" uid="uid://ceyi8ajjy7rjo" path="res://hell_building.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://bl5og5f8wd2kh" path="res://base_ground_tile.tscn" id="3_hn12h"]
 
 [node name="level1" type="Node3D" unique_id=1816299131]
 
@@ -225,3 +226,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -18)
 
 [node name="floor71" parent="." unique_id=1441842739 instance=ExtResource("1_3hls8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -22)
+
+[node name="base_ground_tile_1" parent="." unique_id=244930845 instance=ExtResource("3_hn12h")]
+transform = Transform3D(1, 0, 0, 0, 0.19999999, 0, 0, 0, 1, -15, 0, 15)

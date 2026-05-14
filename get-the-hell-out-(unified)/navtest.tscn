@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cci12nik3jyyw" path="res://test_level.tscn" id="2_qr7tn"]
 [ext_resource type="PackedScene" uid="uid://c7jki806ow6tx" path="res://unit.tscn" id="4_j2a0o"]
 [ext_resource type="PackedScene" uid="uid://wyx3eis8y2qh" path="res://playerCamera.tscn" id="4_qr7tn"]
-[ext_resource type="PackedScene" uid="uid://y1dvwf64lm2" path="res://assets_3d/in_level_ui.tscn" id="7_j2a0o"]
+[ext_resource type="PackedScene" uid="uid://y1dvwf64lm2" path="res://in_level_ui.tscn" id="7_j2a0o"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_nlfv2"]
 

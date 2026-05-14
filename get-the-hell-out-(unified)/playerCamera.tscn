@@ -8,6 +8,6 @@ script = ExtResource("1_gggue")
 [node name="CameraRotationX" type="Node3D" parent="." unique_id=762449062]
 
 [node name="ZoomPositionPivot" type="Node3D" parent="CameraRotationX" unique_id=1015349846]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 20, 40)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 5, 5)
 
 [node name="Camera3D" type="Camera3D" parent="CameraRotationX/ZoomPositionPivot" unique_id=1006887551]
